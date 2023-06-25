@@ -1,34 +1,25 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
+const Person = (props) => {
+  
+  return (
+    <>
+    <h2>First Name: {props.firstName}</h2>
+    <h2>Last Name: {props.lastName}</h2>
+    <h2>Age: {props.age}</h2>
+    </>
+  )
+}
 
 const App = () => {
-  const name = "Meysam";
-  const isNameShowing = true;
   
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello {isNameShowing ? name : 'JANA'}!</p><p>Welcome to the React.
-          {/* Edit <code>src/App.js</code> and save to reload. */}
-        </p>
-        {isNameShowing ? (
-          <>test</>
-        ) : (
-          <>
-          <h1>Name doesn't showing</h1>
-          <h2>Good Luck</h2>
-          </>
-        )}
-        {/* <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
+        <Person firstName='Meysam' lastName='Mahdavikhansari' age='31'/>
+        <Person firstName='Jana' lastName='NSB' age='28'/>
+        <Person firstName='Tanin' lastName='Ravangard' age='3'/>
       </header>
     </div>
   );
