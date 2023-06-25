@@ -1,25 +1,16 @@
 // import logo from './logo.svg';
 import './App.css';
-
-const Person = (props) => {
-  
-  return (
-    <>
-    <h2>First Name: {props.firstName}</h2>
-    <h2>Last Name: {props.lastName}</h2>
-    <h2>Age: {props.age}</h2>
-    </>
-  )
-}
+import { useState } from 'react';
 
 const App = () => {
-  
+  const [counter, setCounter] = useState(0);
+
   return (
     <div className="App">
       <header className="App-header">
-        <Person firstName='Meysam' lastName='Mahdavikhansari' age='31'/>
-        <Person firstName='Jana' lastName='NSB' age='28'/>
-        <Person firstName='Tanin' lastName='Ravangard' age='3'/>
+        <button onClick={() => setCounter((prevCount) => prevCount +1)}>+</button>
+        <h1>{counter}</h1>
+        <button onClick={() => setCounter((prevCount) => prevCount -1)}>-</button>
       </header>
     </div>
   );
