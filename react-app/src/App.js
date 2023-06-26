@@ -1,9 +1,14 @@
 // import logo from './logo.svg';
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const App = () => {
   const [counter, setCounter] = useState(0);
+
+  // Please note that this is not a good User Experience!
+  useEffect(() => {
+    alert('The counter was just changed to ' + counter);
+  }, [counter]);
 
   return (
     <div className="App">
